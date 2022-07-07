@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>gridz 2</title>
+		<style type="text/css" media="screen">
+			.container {
+				display: grid;
+				grid-gap: 5px;
+				grid-template-areas:
+					"header header"
+					"sidebar main"
+					"sidebar main"
+					"footer footer";
+			}
+			.item {
+				background-color: #1E96FF;
+				color: white;
+				text-align: center;
+				padding: 20px;
+			}
+			.main {
+				grid-area: main;
+			}
+			.sidebar {
+				grid-area: sidebar;
+			}
+			.header {
+				grid-area: header;
+			}
+			.footer {
+				grid-area: footer;
+			}
+			.grid-container {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-template-rows: 300px;
+				grid-gap: 5px;
+				background-color: #E0F6FF;
+				padding: 5px;
+				// justify-items: center;
+				align-items: end;
+			}
+			.grid-item {
+				background-color: #1E96FF;
+				padding: 15px;
+				text-align: center;
+				color: white;
+			}
+			.grid-container2 {
+				display: grid;
+				grid-template: repeat(10, 1fr) / 1fr 1fr;
+				grid-gap: 2px;
+				background-color: #E0F6FF;
+				padding: 3px;
+				
+			}
+			.header2 {
+				display: flex;
+				justify-content: flex-end;
+				grid-column: span 2;
+			}
+			.grid-item2 {
+				background-color: #1E96FF;
+				margin-top: 2px;
+				padding: 20px;
+			}
+			a {
+				padding-left: 5px;
+			}
+			.bottm {
+				grid-column: span 2;
+			}
+		</style>
+		
+	</head>
+	<body>
+		
+		<div class="container">
+			<div class="item header">Header</div>
+			<div class="item sidebar">Sidebar</div>
+			<div class="item main">Main</div>
+			<div class="item footer">Footer</div>
+		</div>
+		<br />
+		<div class="grid-container">
+			<div class="grid-item">Header</div>
+			<div class="grid-item">Sidebar</div>
+			<!-- <div class="grid-item main">Main</div>
+			<div class="grid-item footer">Footer</div>
+			-->
+		</div>
+		<br />
+		<h2>Combo CSS Grid and Flex</h2>
+		
+		<div class="grid-container2">
+			<div class="grid-item2 header2">
+				<a href="#">Home</a>
+				<a href="#">About</a>
+				<a href="#">Contact Us</a>
+			</div>
+			<div class="grid-item2">Grid Item</div>
+			<div class="grid-item2">Grid Item</div>
+			<div class="grid-item2">Grid Item</div>
+			<div class="grid-item2">Grid Item</div>
+			<div class="grid-item2 bottm">Grid Item span</div>
+			<div class="grid-item2">Grid Item No-span</div>
+		</div>
+	</body>
+</html>
